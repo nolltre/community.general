@@ -274,8 +274,6 @@ class InventoryModule(BaseInventoryPlugin, Constructable, Cacheable):
         return self.session
 
     def _get_auth(self):
-        credentials = urlencode({'username': self.proxmox_user, 'password': self.proxmox_password, })
-
         if self.proxmox_password:
 
             credentials = urlencode({'username': self.proxmox_user, 'password': self.proxmox_password, })
